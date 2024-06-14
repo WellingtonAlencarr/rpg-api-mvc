@@ -23,7 +23,7 @@ namespace RpgMvc.Controllers
                 string token = HttpContext.Session.GetString("SessionTokenUsuario");
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-                string uriBuscaPersonagens = "http://xyz.somee.com/RpgApi/Personagens/GetAll";
+                string uriBuscaPersonagens = "http://well.somee.com/RpgApi/Personagens/GetAll";
                 HttpResponseMessage response = await httpClient.GetAsync(uriBuscaPersonagens);
                 string serialized = await response.Content.ReadAsStringAsync();
 
@@ -85,7 +85,7 @@ namespace RpgMvc.Controllers
                 string token = HttpContext.Session.GetString("SessionTokenUsuario");
                 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-                string uriBuscaPersonagens = "http://xyz.somee.com/RpgApi/Personagens/GetAll";
+                string uriBuscaPersonagens = "http://well.somee.com/RpgApi/Personagens/GetAll";
                 HttpResponseMessage response = await httpClient.GetAsync(uriBuscaPersonagens);
                 string serialized = await response.Content.ReadAsStringAsync();
 
@@ -99,7 +99,7 @@ namespace RpgMvc.Controllers
                 }
                 else
                     throw new System.Exception(serialized);
-                string uriBuscaHabilidades = "http://xyz.somee.com/RpgApi/PersonagemHabilidades/GetHabilidades";
+                string uriBuscaHabilidades = "http://well.somee.com/RpgApi/PersonagemHabilidades/GetHabilidades";
                 response = await httpClient.GetAsync(uriBuscaHabilidades);
                 serialized = await response.Content.ReadAsStringAsync();
 
@@ -158,11 +158,9 @@ namespace RpgMvc.Controllers
 
                 HttpClient httpClient = new HttpClient();
                 string token = HttpContext.Session.GetString("SessionTokenUsuario");
-                httpClient.DefaultRequestHeaders.Authorization = new
-AuthenticationHeaderValue("Bearer", token);
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
-                HttpResponseMessage response = await httpClient.GetAsync(uriBase +
-uriComplementar);
+                HttpResponseMessage response = await httpClient.GetAsync(uriBase + uriComplementar);
                 string serialized = await response.Content.ReadAsStringAsync();
                 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
@@ -188,12 +186,9 @@ uriComplementar);
             {
                 HttpClient httpClient = new HttpClient();
                 string token = HttpContext.Session.GetString("SessionTokenUsuario");
-                httpClient.DefaultRequestHeaders.Authorization = new
-AuthenticationHeaderValue("Bearer", token);
+                httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
                 string uriComplementar = "ApagarDisputas";
-                
-HttpResponseMessage response = await httpClient.DeleteAsync(uriBase +
-uriComplementar);
+                HttpResponseMessage response = await httpClient.DeleteAsync(uriBase + uriComplementar);
                 string serialized = await response.Content.ReadAsStringAsync();
                 
                 if (response.StatusCode == System.Net.HttpStatusCode.OK)
