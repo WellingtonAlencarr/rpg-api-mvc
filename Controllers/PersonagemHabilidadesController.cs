@@ -7,7 +7,7 @@ namespace RpgMvc.Controllers
 {
     public class PersonagemHabilidadesController : Controller
     {
-        public string uriBase = "http://xyz.somee.com/RpgApi/PersonagemHabilidades/";
+        public string uriBase = "http://well.somee.com/RpgApi/PersonagemHabilidades/";
 
 
         [HttpGet("PersonagemHabilidades/{id}")]

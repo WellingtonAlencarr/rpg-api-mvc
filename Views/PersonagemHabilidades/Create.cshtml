@@ -1,4 +1,4 @@
-﻿@model RpgMvc.Models.PersonagemHabilidadeViewModel
+﻿@model RpgMvc.Models.PersonagemHabilidadesViewModel
 @{
     ViewBag.Title = "Create";
 }
@@ -37,8 +37,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Habilidade, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-6">
-                @Html.DropDownListFor(model => model.HabilidadeId, new SelectList(@ViewBag.ListaHabilidades, "Id", "Nome"),
-                         "---Selecione---", new { @class = "form-control" })
+                @Html.DropDownListFor(model => model.HabilidadeId, new SelectList(@ViewBag.ListaHabilidades, "Id", "Nome"), "---Selecione---", new { @class = "form-control" })
             </div>
         </div><br />
         <div class="form-group">

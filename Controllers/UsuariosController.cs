@@ -1,12 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Net.Http.Headers;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Formatters;
-using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using RpgMvc.Models;
 
@@ -16,15 +9,15 @@ namespace RpgMvc.Controllers
    
     public class UsuariosController : Controller
     {
-       public string uriBase = "http://luizsouza.somee.com/RpgApi/Usuarios/";
+       public string uriBase = "http://well.somee.com/RpgApi/Usuarios/";
     
     [HttpGet]
     public ActionResult Index()
     {
         return View("CadastrarUsuario");
     }
-      [HttpPost]
 
+      [HttpPost]
     public async Task<IActionResult> RegistrarAsync(UsuarioViewModel u)
     {
         try 

@@ -11,7 +11,7 @@ namespace RpgMvc.Controllers
 {
     public class DisputasController : Controller
     {
-        public string uriBase = "luizsouza/Disputas/";
+        public string uriBase = "http://well.somee.com/RpgApi/Disputas/";
 
 
         [HttpGet]

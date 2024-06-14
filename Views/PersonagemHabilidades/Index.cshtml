@@ -1,4 +1,4 @@
-﻿@model IEnumerable<RpgMvc.Models.PersonagemHabilidadeViewModel>
+﻿@model IEnumerable<RpgMvc.Models.PersonagemHabilidadesViewModel>
 @{
     ViewBag.Title = "Index";
 }
@@ -34,9 +34,7 @@
             <td>@Html.DisplayFor(modelItem => item.Habilidade.Nome) </td>
             <td>@Html.DisplayFor(modelItem => item.Habilidade.Dano) </td>
             <td>
-                @Html.ActionLink("Deletar", "Delete"
-                         , new { habilidadeId = item.HabilidadeId, personagemId = item.PersonagemId }
-                         , new { onclick = "return confirm('Deseja realmente deletar esta habilidade ?');" })
+                @Html.ActionLink("Deletar", "Delete", new { habilidadeId = item.HabilidadeId, personagemId = item.PersonagemId }, new { onclick = "return confirm('Deseja realmente deletar esta habilidade ?');" })
             </td>
         </tr>
     }
